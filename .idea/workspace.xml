@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7c3d184b-6b3f-4b89-8f3f-633493320cd8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +33,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Content/Proof" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Content\Proof" />
+      <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Content\Test1" />
+      <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Content" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Content\Test1" />
+      <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Content" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -43,6 +61,11 @@
       <updated>1653076924825</updated>
       <workItem from="1653076925963" duration="334000" />
       <workItem from="1653078836092" duration="78000" />
+      <workItem from="1655133097686" duration="697000" />
+      <workItem from="1655134021546" duration="1250000" />
+      <workItem from="1655135292399" duration="6656000" />
+      <workItem from="1655145325873" duration="7559000" />
+      <workItem from="1655153556634" duration="4311000" />
     </task>
     <servers />
   </component>

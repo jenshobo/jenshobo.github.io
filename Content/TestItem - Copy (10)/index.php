@@ -5,6 +5,6 @@
     <title>Main</title>
 </head>
 <body>
-<h1>Site is being maintained</h1>
+<a><?php include "readFile.php" ?></a>
 </body>
 </html>
