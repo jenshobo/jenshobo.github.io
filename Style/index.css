@@ -4,11 +4,15 @@ body{
     margin: 0;
 }
 
+.Header{
+    color: white;
+}
+
 h1 {
     background-color: black;
     padding: 60px;
 
-    color: white;
+    color: inherit;
 
     margin: 0 0 0 0;
 }
@@ -17,7 +21,7 @@ h2 {
     text-align: right;
     padding: 20px 20px 20px 70px;
     font-size:15px;
-    color: white;
+    color: inherit;
     margin: 0 0 0 0;
 }
 h3 {
