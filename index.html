@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Main</title>
+    <title>Portfolio Jens Hobo</title>
     <style>
         body{
             background-color: whitesmoke;
@@ -18,8 +18,6 @@
             background-color: black;
             padding: 60px;
 
-            color: inherit;
-
             margin: 0 0 0 0;
         }
         h2 {
@@ -27,32 +25,91 @@
             text-align: right;
             padding: 20px 20px 20px 70px;
             font-size:15px;
-            color: inherit;
             margin: 0 0 0 0;
         }
         h3 {
             background-color: black;
-
-            color: white;
             font-size: small;
             line-height: 1.6;
 
             margin: 0 0 0 0;
             padding: 20px 20px 20px 20px;
         }
+        a {
+            color: inherit;
+        }
+        .Text {
+            width: 790px;
+            margin: auto;
+        }
+        .Item {
+            border: 1px solid;
+            width: 750px;
+            padding: 0 0 0 0;
+            margin: 45px 0 0 0;
+            float: left;
+        }
+        .Content {
+            width: 790px;
+            margin: auto;
+        }
+        .Title {
+            font-size: x-large;
+            padding: 20px;
+        }
+        .Video {
+            display: flex;
+            align-items: stretch;
+            width: 100%;
+            height: 100%;
+        }
+        .Description{
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
 <div class="Header">
     <h1> <!-- title with link -->
-        <a href="Content/TestItem.html" style='text-decoration: none'>Portfolio Jens Hobo</a>
+        <a href="index.html" style='text-decoration: none'>Portfolio Jens Hobo</a>
     </h1>
     <h2> <!-- links to other pages, email and phone number -->
-        <a href="Content/TestItem.html" style='text-decoration: none'>phone number and what not</a>
+        <a data-auto-recognition="true" href="mailto:jenshobo@gmail.com" style='text-decoration: none;'>jenshobo@gmail.com</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a>06 3904 0305</a>
     </h2>
     <h3> <!-- explain the page here, no links -->
-        <a>explain the page</a>
+        <div class="Text">
+            <a>Here you'll find my work that I deem worthy of showing</a> <br>
+            <a>Simply scroll down and press the text to get more details about the project that caught your attention</a> <br>
+            <a>With the details you'll also be given videos if anywhere made, the same goes for download links to Github or Itch</a> <br>
+            <a>If you have any questions you can contact me trough pressing the email on the top left</a> <br>
+        </div>
     </h3>
+</div>
+<div class="Content">
+    <div class="Item">
+        <div class="Video">
+            <iframe width="790" height="300" src="https://www.youtube.com/embed/MeUZ7uWln1k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="Title">
+            <a href="Content/TestItem.html" style='text-decoration: none'>Test Item</a>
+        </div>
+        <div class="Description">
+            <a href="Content/TestItem.html" style='text-decoration: none'>Test Item description </a>
+        </div>
+    </div>
+    <div class="Item">
+        <div class="Video">
+            <iframe width="790" height="300" src="https://www.youtube.com/embed/MeUZ7uWln1k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="Title">
+            <a href="Content/TestItem.html" style='text-decoration: none'>Test Item</a>
+        </div>
+        <div class="Description">
+            <a href="Content/TestItem.html" style='text-decoration: none'>Test Item description </a>
+        </div>
+    </div>
 </div>
 </body>
 </html>
