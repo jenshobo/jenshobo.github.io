@@ -21,6 +21,14 @@
       margin: 0 0 0 0;
     }
     h2 {
+      margin: 0 0 0 0;
+    }
+    .HyperLink {
+      float: left;
+      padding: 20px;
+      font-size:15px;
+    }
+    .Contact {
       background-color: #363636;
       text-align: right;
       padding: 20px 20px 20px 70px;
@@ -40,6 +48,30 @@
     a {
       color: inherit;
     }
+    .Item {
+      border: 1px solid;
+      width: 1100px;
+      padding: 0 0 0 0;
+      margin: 45px 0 0 0;
+      float: left;
+    }
+    .Content {
+      width: 1100px;
+      margin: auto;
+    }
+    .Title {
+      font-size: x-large;
+      padding: 20px;
+    }
+    .Video {
+      display: flex;
+      align-items: stretch;
+      width: 100%;
+      height: 100%;
+    }
+    .Description{
+      padding: 20px;
+    }
   </style>
 </head>
 <body>
@@ -48,11 +80,35 @@
     <a href="../index.html" style='text-decoration: none'>Portfolio Jens Hobo</a>
   </h1>
   <h2> <!-- links to other pages, email and phone number -->
-    <a href="../index.html" style='text-decoration: none'>phone number and what not</a>
+    <div class="HyperLink">
+      <a href="../index.html" style='text-decoration: none' ><= back</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="../Extra/About%20me.html" style='text-decoration: none' >About me</a>
+    </div>
+    <div class="Contact">
+      <a data-auto-recognition="true" href="mailto:jenshobo@gmail.com" style='text-decoration: none;'>jenshobo@gmail.com</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a>06 3904 0305</a>
+    </div>
   </h2>
   <h3> <!-- explain the page here, no links -->
-    <a>this is a test page</a>
+    <div class="Text">
+      <a></a>
+    </div>
   </h3>
+</div>
+<div class="Content">
+  <div class="Item">
+    <div class="Video">
+      <iframe width="1100" height="500" src="https://www.youtube.com/embed/MeUZ7uWln1k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="Title">
+      <a>Test Item</a>
+    </div>
+    <div class="Description">
+      <a>Test Item description </a>
+    </div>
+  </div>
 </div>
 </body>
 </html>
