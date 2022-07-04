@@ -1,0 +1,45 @@
+.Content{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 50px;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+.Welcome{
+    padding: 50px;
+}
+.GIF{
+    float: right;
+    padding: 0 150px 0 0;
+}
+.Title{
+    font-size: xxx-large;
+    padding: 0 0 10px 100px;
+}
+.Description{
+    font-size: x-large;
+    padding: 0 0 10px 100px;
+}
+.Buttons{
+    padding: 0 0 0 90px;
+}
+.button{
+    font-size: x-large;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid #363636;
+    margin: 4px 10px;
+    transition-duration: 0.4s;
+    float: left;
+}
+.button:hover{
+    background-color: #363636;
+    color: white;
+}
+img{
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}

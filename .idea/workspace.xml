@@ -16,9 +16,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -55,11 +55,11 @@
       <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Content" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Style\OverallStyle" />
       <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Extra" />
       <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Extra\Images" />
       <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Style" />
       <recent name="C:\xampp\htdocs\Github\jenshobo.github.io" />
-      <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Content\Style" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -83,7 +83,7 @@
       <workItem from="1655212208568" duration="1414000" />
       <workItem from="1655220052429" duration="2129000" />
       <workItem from="1656935080652" duration="7889000" />
-      <workItem from="1656943806627" duration="5314000" />
+      <workItem from="1656943806627" duration="10310000" />
     </task>
     <servers />
   </component>

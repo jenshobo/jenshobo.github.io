@@ -5,8 +5,9 @@
     <title>Portfolio/Work</title>
     <link rel="stylesheet" href="../Style/Style.css">
     <link rel="stylesheet" href="../Style/Navbar.css">
-    <link rel="stylesheet" href="../Style/HeaderStyle.css">
+    <link rel="stylesheet" href="../Style/OverallStyle/HeaderStyle.css">
     <link rel="stylesheet" href="../Style/Animation.css">
+    <link rel="stylesheet" href="../Style/OverallStyle/FooterStyle.css">
 </head>
 <body>
 <div class="Header">
@@ -25,22 +26,7 @@
                 <a data-auto-recognition="true" href="mailto:jenshobo@gmail.com" style='text-decoration: none;'>jenshobo@gmail.com</a>
                 <a>06 3904 0305</a>
             </div>
-
-            <script>
-                window.onscroll = function() {myFunction()};
-
-                var navbar = document.getElementById("navbar");
-                var sticky = navbar.offsetTop;
-
-                function myFunction() {
-                    if (window.pageYOffset >= sticky) {
-                        navbar.classList.add("sticky")
-                    } else {
-                        navbar.classList.remove("sticky");
-                    }
-                }
-            </script>
-
+            <script src="../Extra/Functional/StickyBar.js"></script>
         </div>
     </h2>
     <h3> <!-- explain the page here -->

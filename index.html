@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="Style/IndexStyle.css">
+    <title>Portfolio/Main</title>
     <link rel="stylesheet" href="Style/Navbar.css">
-    <link rel="stylesheet" href="Style/HeaderStyle.css">
+    <link rel="stylesheet" href="Style/OverallStyle/HeaderStyle.css">
+    <link rel="stylesheet" href="Style/OverallStyle/FooterStyle.css">
+    <link rel="stylesheet" href="Style/Main.css">
     <link rel="stylesheet" href="Style/Animation.css">
 </head>
 <body>
@@ -25,20 +26,7 @@
             <a data-auto-recognition="true" href="mailto:jenshobo@gmail.com" style='text-decoration: none;'>jenshobo@gmail.com</a>
             <a>06 3904 0305</a>
         </div>
-        <script>
-            window.onscroll = function() {myFunction()};
-
-            var navbar = document.getElementById("navbar");
-            var sticky = navbar.offsetTop;
-
-            function myFunction() {
-                if (window.pageYOffset >= sticky) {
-                    navbar.classList.add("sticky")
-                } else {
-                    navbar.classList.remove("sticky");
-                }
-            }
-        </script>
+        <script src="Extra/Functional/StickyBar.js"></script>
         </div>
     </h2>
     <h3> <!-- explain the page here -->
@@ -50,7 +38,26 @@
     </h3>
 </div>
 <div class="Content">
-
+    <div class="Welcome">
+        <div class="GIF">
+            <img src="https://i.pinimg.com/originals/d9/32/f9/d932f98b1a9cf1873addb1ef55956434.gif" alt="funny GIF" width="500">
+        </div>
+        <div class="Title">
+            My name is Jens Hobo
+        </div>
+        <div class="Description">
+            Welcome to my portfolio website <br>
+            I am a game developer/software engineer <br>
+        </div>
+        <div class="Buttons">
+            <form method="POST" action="Extra/Work.html">
+                <button class="button" type="submit">My work</button>
+            </form>
+            <form method="POST" action="Extra/About%20me.html">
+                <button class="button" type="submit">More about me</button>
+            </form>
+        </div>
+    </div>
 </div>
 <div class="Footer">
     <p>Site made by Jens Hobo<br>
