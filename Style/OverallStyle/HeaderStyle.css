@@ -26,7 +26,6 @@ h1 {
 }
 h2 {
     margin: 0 0 0 0;
-    text-indent: 20px;
 }
 .HyperLink {
     float: left;
@@ -46,4 +45,15 @@ h3 {
 
     margin: 0 0 0 0;
     padding: 20px 20px 20px 20px;
+}
+.Links{
+    float: left;
+    padding: 0 25px 0 0;
+}
+.navButton{
+    color: white;
+    transition-duration: 0.4s;
+}
+.navButton:hover{
+    color: #737373;
 }
