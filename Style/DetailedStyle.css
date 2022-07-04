@@ -1,50 +1,30 @@
+@keyframes fadeIn {
+    from {
+        background-color: transparent;
+        color: transparent;
+        opacity: 0;
+    }
+    to {
+        background-color: inherit;
+        color: inherit;
+        opacity: 1;
+    }
+}
+
 body{
     background-color: whitesmoke;
     font-family: Arial, serif;
     margin: 0;
 }
 
-.Header{
-    color: white;
-}
-
-h1 {
-    background-color: black;
-    padding: 60px;
-
-    margin: 0 0 0 0;
-}
-h2 {
-    margin: 0 0 0 0;
-}
-.HyperLink {
-    float: left;
-    padding: 20px;
-    font-size:15px;
-}
-.Contact {
-    background-color: #363636;
-    text-align: right;
-    padding: 20px 20px 20px 70px;
-    font-size:15px;
-    margin: 0 0 0 0;
-}
-h3 {
-    background-color: black;
-
-    color: white;
-    font-size: small;
-    line-height: 1.6;
-
-    margin: 0 0 0 0;
-    padding: 20px 20px 20px 20px;
-}
 a {
     color: inherit;
 }
 .Text {
     width: 1100px;
     margin: auto;
+    animation-name: fadeIn;
+    animation-duration: 1s;
 }
 .Item {
     border: 1px solid;
@@ -52,14 +32,20 @@ a {
     padding: 0 0 0 0;
     margin: 10px 0 70px 0;
     float: left;
+    animation-name: fadeIn;
+    animation-duration: 1s;
 }
 .Content {
     width: 1100px;
     margin: auto;
+    animation-name: fadeIn;
+    animation-duration: 1s;
 }
 .Title {
     font-size: x-large;
     padding: 20px;
+    animation-name: fadeIn;
+    animation-duration: 1s;
 }
 .Video {
     display: flex;
@@ -72,15 +58,21 @@ a {
 }
 .Image{
     padding: 20px;
+    animation-name: fadeIn;
+    animation-duration: 1s;
 }
 img{
     border-radius: 8px;
     object-fit: cover;
     object-position: center;
+    animation-name: fadeIn;
+    animation-duration: 1s;
 }
 .Link{
     padding: 20px;
     color: darkblue;
+    animation-name: fadeIn;
+    animation-duration: 1s;
 }
 .Footer{
     background-color: black;

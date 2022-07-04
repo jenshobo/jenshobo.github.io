@@ -2,24 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Test item</title>
-  <link rel="stylesheet" href="../Style/DetailedStyle.css">
+  <title>Portfolio/TestItem</title>
+  <link rel="stylesheet" href="../../Style/DetailedStyle.css">
+  <link rel="stylesheet" href="../../Style/Navbar.css">
+  <link rel="stylesheet" href="../../Style/HeaderStyle.css">
+  <link rel="stylesheet" href="../../Style/Animation.css">
 </head>
 <body>
 <div class="Header">
   <h1> <!-- title with link -->
-    <a href="../index.html" style='text-decoration: none'>Portfolio Jens Hobo</a>
+    <a href="../../index.html" style='text-decoration: none'>Portfolio Jens Hobo</a>
   </h1>
   <h2> <!-- links to other pages, email and phone number -->
+    <div id="navbar">
     <div class="HyperLink">
-      <a href="../index.html" style='text-decoration: none' ><= back</a>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="../Extra/About%20me.html" style='text-decoration: none' >About me</a>
+      <a href="../../index.html" style='text-decoration: none' >Main page</a>
+      <a href="../About%20me.html" style='text-decoration: none' >About me</a>
+      <a href="../Work.html" style='text-decoration: none' >Work</a>
+      <a href="https://github.com/jenshobo" target="_blank" style='text-decoration: none' >GitHub</a>
     </div>
     <div class="Contact">
       <a data-auto-recognition="true" href="mailto:jenshobo@gmail.com" style='text-decoration: none;'>jenshobo@gmail.com</a>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <a>06 3904 0305</a>
+    </div>
+    <script>
+      window.onscroll = function() {myFunction()};
+
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
     </div>
   </h2>
   <h3> <!-- explain the page here, no links -->

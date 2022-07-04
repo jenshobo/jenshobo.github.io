@@ -1,0 +1,12 @@
+@keyframes fadeIn {
+    from {
+        background-color: transparent;
+        color: transparent;
+        opacity: 0;
+    }
+    to {
+        background-color: inherit;
+        color: inherit;
+        opacity: 1;
+    }
+}
