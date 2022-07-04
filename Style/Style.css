@@ -6,6 +6,7 @@
     float: left;
     animation-name: fadeIn;
     animation-duration: 1s;
+    transition-duration: 0.4s;
 }
 .Content {
     width: 790px;
