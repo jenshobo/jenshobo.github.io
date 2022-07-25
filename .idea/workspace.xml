@@ -16,9 +16,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -39,7 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xamppp/htdocs/Github/jenshobo.github.io/Extra/Content",
+    "last_opened_file_path": "C:/xampp/htdocs/Github/jenshobo.github.io/Extra/Content",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -49,18 +49,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Extra\Content" />
       <recent name="C:\xamppp\htdocs\Github\jenshobo.github.io\Extra\Content" />
       <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Extra" />
       <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Content\Proof" />
       <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Content\Test1" />
-      <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Content" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Extra\Images" />
+      <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Test" />
       <recent name="C:\xamppp\htdocs\Github\jenshobo.github.io\Extra\Images" />
       <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Style\OverallStyle" />
       <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Extra" />
-      <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Extra\Images" />
-      <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Style" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -87,6 +87,7 @@
       <workItem from="1656943806627" duration="11502000" />
       <workItem from="1657022677134" duration="1873000" />
       <workItem from="1658748693822" duration="4794000" />
+      <workItem from="1658753684415" duration="2829000" />
     </task>
     <servers />
   </component>
