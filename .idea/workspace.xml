@@ -33,33 +33,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/Github/jenshobo.github.io/Extra&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/xamppp/htdocs/Github/jenshobo.github.io/Extra/Content",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xamppp\htdocs\Github\jenshobo.github.io\Extra\Content" />
       <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Extra" />
       <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Content\Proof" />
       <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Content\Test1" />
       <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Content" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xamppp\htdocs\Github\jenshobo.github.io\Extra\Images" />
       <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Style\OverallStyle" />
       <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Extra" />
       <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Extra\Images" />
       <recent name="C:\xampp\htdocs\Github\jenshobo.github.io\Style" />
-      <recent name="C:\xampp\htdocs\Github\jenshobo.github.io" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -85,6 +86,7 @@
       <workItem from="1656935080652" duration="7889000" />
       <workItem from="1656943806627" duration="11502000" />
       <workItem from="1657022677134" duration="1873000" />
+      <workItem from="1658748693822" duration="4794000" />
     </task>
     <servers />
   </component>
