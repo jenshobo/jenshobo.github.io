@@ -2,79 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio/Main</title>
-    <link rel="stylesheet" href="Style/Navbar.css">
-    <link rel="stylesheet" href="Style/OverallStyle/HeaderStyle.css">
-    <link rel="stylesheet" href="Style/OverallStyle/FooterStyle.css">
-    <link rel="stylesheet" href="Style/Main.css">
-    <link rel="stylesheet" href="Style/Animation.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="./External/Style's/Image.css" rel="stylesheet" type="text/css">
+    <link href="./External/Style's/Header.css" rel="stylesheet" type="text/css">
+    <link href="./External/Style's/Animations.css" rel="stylesheet" type="text/css">
+    <link href="./External/Style's/Footer.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            background-color: #2c363f;
+            overflow: hidden;
+            user-select: none;
+        }
+    </style>
 </head>
 <body>
-<div class="Header">
-    <h1> <!-- title with link -->
-        <a class="navButton" href="index.html" style='text-decoration: none'>Portfolio Jens Hobo</a>
-    </h1>
-    <h2> <!-- links to other pages, email and phone number -->
-        <div id="navbar">
-        <div class="HyperLink">
-            <div class="Links">
-                <a class="navButton" href="index.html" style='text-decoration: none' >Main page</a>
-            </div>
-            <div class="Links">
-                <a class="navButton" href="Extra/About%20me.html" style='text-decoration: none' >About me</a>
-            </div>
-            <div class="Links">
-                <a class="navButton" href="Extra/Work.html" style='text-decoration: none' >Work</a>
-            </div>
-            <div class="Links">
-                <a class="navButton" href="Extra/Contact.html" style='text-decoration: none' >Contact</a>
-            </div>
-            <div class="Links">
-                <a class="navButton" href="https://github.com/jenshobo" target="_blank" style='text-decoration: none' >GitHub</a>
-            </div>
+    <div class="Header">
+        <div id="Title">
+            <a href="index.html" style="text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-weight: bold; color:rgb(0, 0, 0);">Portfolio Jens Hobo</a>
         </div>
-        <div class="Contact">
-            <a data-auto-recognition="true" href="mailto:jenshobo@gmail.com" style='text-decoration: none;'>jenshobo@gmail.com</a>
+        <div id="Help">
+            <a style="text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-weight: bold; color:rgb(0, 0, 0);">To open the menu, press the icon in the center</a>
         </div>
-        <script src="Extra/Functional/StickyBar.js"></script>
+        <div id="Arrow">
+            <img src="./External/Icons/Arrow.png" alt="ArrowIcon">
         </div>
-    </h2>
-    <h3> <!-- explain the page here -->
-        <div class="Text">
-            <a>
-
-            </a>
-        </div>
-    </h3>
-</div>
-<div class="Content">
-    <div class="Welcome">
-        <a href="Extra/Content/Brin.html" style='text-decoration: none'>
-            <div class="GIF">
-                <img src="Extra/Images/IMG-20220502-WA0003.jpg" alt="funny GIF" width="750">
+        <div id="Button">
+            <div id="Menu">
+                <div id="Container0">
+                    <a id="MenuTitle" href="./Pages/AmoutMe.html">About me</a>
+                    <a id="MenuImage" href="./Pages/AmoutMe.html"><img id="MenuImage" href="" src="./External/Photo's/FacePhoto.jpg" alt="MenuImage"></a>
+                </div>
+                <div id="Container1">
+                    <a id="MenuTitle" href="./Pages/Work.html">My work</a>
+                    <a id="MenuImage" href="./Pages/Work.html"><img id="MenuImage" href="" src="./External/Photo's/ValleyOverview.jpg" alt="MenuImage"></a>
+                </div>
+                <div id="Container2">
+                    <a id="MenuTitle" href="./Pages/Contact.html">Contact</a>
+                    <a id="MenuImage" href="./Pages/Contact.html"><img id="MenuImage" href="" src="./External/Photo's/Mail.png" alt="MenuImage"></a>
+                </div>
+                <div id="Container3">
+                    <a id="MenuTitle" href="https://github.com/jenshobo" target="_blank">Github</a>
+                    <a id="MenuImage" href="https://github.com/jenshobo" target="_blank"><img id="MenuImage" src="./External/Photo's/Github.png" alt="MenuImage"></a>
+                </div>
             </div>
-        </a>
-        <div class="Title">
-            My name is Jens Hobo
-        </div>
-        <div class="Description">
-            Welcome to my portfolio website. <br>
-            I am a game developer/software engineer. <br>
-            This whole site was coded by Jens Hobo (aka me). <br>
-        </div>
-        <div class="Buttons">
-            <a class="button" href="Extra/Work.html" style="text-decoration: none">My work</a>
-            <a class="button" href="Extra/About%20me.html" style="text-decoration: none">More about me</a>
-            <a class="button" href="Extra/Contact.html" style="text-decoration: none">Get in contact</a>
+            <input type="checkbox" id="btnControl" />
+            <label class="btn" for="btnControl">
+                <img id="MenuIcon" src="./External/Icons/MenuIcon.png" alt="MenuIcon">
+            </label>
         </div>
     </div>
-</div>
-<div class="Footer">
-    <p>Site made by Jens Hobo<br>
-        <a href="mailto:jenshobo@gmail.com">jenshobo@gmail.com</a>
-        <a>06 3904 0305</a>
-    </p>
-</div>
+    <div class="Content">
+        <div id="OuterLeft">
+            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 1--></a>
+            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 2--></a>
+            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--can be unique--></a>
+            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 1--></a>
+            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 2--></a>
+        </div>
+        <div id="InnerLeft">
+            <a href="./Pages/AmoutMe.html"><img id="Image" src="./External/Photo's/Kaito.jpg" alt="MainImage"> <!--must be the same as 1--></a>
+            <a href="./Pages/Work/FranticFling.html"><img id="Image" src="./External/Photo's/FranticFling.png" alt="MainImage"> <!--must be the same as 2--></a>
+            <a href="./Pages/Work/Commodore.html"><img id="Image" src="./External/Photo's/Commodore.jpg" alt="MainImage"> <!--can be unique--></a>
+            <a href="./Pages/AmoutMe.html"><img id="Image" src="./External/Photo's/Kaito.jpg" alt="MainImage"> <!--must be the same as 1--></a>
+            <a href="./Pages/Work/FranticFling.html"><img id="Image" src="./External/Photo's/FranticFling.png" alt="MainImage"> <!--must be the same as 2--></a>
+        </div>
+        <div id="Middle">
+            <a href="./Pages/Work/PolygoniaValley.html"><img id="Image" src="./External/Photo's/ValleyOverview.jpg" alt="MainImage"> <!--must be the same as 1--></a>
+            <a href="./Pages/Work/DuckHunt.html"><img id="Image" src="./External/Photo's/Duck Hunt.png" alt="MainImage"> <!--must be the same as 2--></a>
+            <a href="./Pages/AmoutMe.html"><img id="Image" src="./External/Photo's/FacePhoto.jpg" alt="MainImage"> <!--can be unique--></a>
+            <a href="./Pages/Work/PolygoniaValley.html"><img id="Image" src="./External/Photo's/ValleyOverview.jpg" alt="MainImage"> <!--must be the same as 1--></a>
+            <a href="./Pages/Work/DuckHunt.html"><img id="Image" src="./External/Photo's/Duck Hunt.png" alt="MainImage"> <!--must be the same as 2--></a>
+        </div>
+        <div id="InnerRight">
+            <a href="./Pages/Work/Site.html"><img id="Image" src="./External/Photo's/Site.jpg" alt="MainImage"> <!--must be the same as 1--></a>
+            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 2--></a>
+            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--can be unique--></a>
+            <a href="./Pages/Work/Site.html"><img id="Image" src="./External/Photo's/Site.jpg" alt="MainImage"> <!--must be the same as 1--></a>
+            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 2--></a>
+        </div>
+        <div id="OuterRight">
+            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 1--></a>
+            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 2--></a>
+            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--can be unique--></a>
+            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 1--></a>
+            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 2--></a>
+        </div>
+    </div>
+    <div class="Footer">
+        <a>Site made by Jens Hobo 2022</a>
+    </div>
 </body>
 </html>
 <!--

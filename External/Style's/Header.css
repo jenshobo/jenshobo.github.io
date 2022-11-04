@@ -1,0 +1,134 @@
+.Header {
+    position: fixed;
+    background-color: #4b5d6c;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+
+    transition-duration: .5s;
+}
+#Title {
+    left: 0px;
+    padding: 5px 0px 0px 10px;
+    position: absolute;
+}
+#Help {
+    right: 0px;
+    padding: 5px 10px 0px 0px;
+    position: absolute;
+}
+
+#MenuIcon {
+    height: 25px;
+    width: 25px;
+    transition-duration: .5s;
+}
+
+#MenuIcon:hover {
+    cursor: pointer;
+    margin-top: 10px;
+    width: 27px;
+    height: 27px;
+}
+
+#btnControl {
+    display: none;
+}
+
+#btnControl:checked + label > img {
+    margin-top: 350px;
+    
+}
+
+#Arrow > img {
+    position: absolute;
+    width: 50px;
+    left: 51%;
+    animation-name: rotateArrowStart;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+    transform: rotate(0deg);
+    margin-top: -50px;
+}
+
+
+#Menu {
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
+    height: 360px;
+    
+}
+
+#MenuTitle {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    position: absolute;
+    margin-top: 25px;
+}
+
+#MenuImage {
+    position: absolute;
+    top: 50px;
+
+    object-fit: cover;
+
+    width: 400px;
+    aspect-ratio: 1.5 / 1;
+    border-radius: 25px;
+
+    transition-duration: .5s;
+}
+
+#Container0 > #MenuImage {
+    left: -9%;
+    top: 0%;
+}
+#Container1 > #MenuImage {
+    left: 16%;
+    top: 0%;
+}
+#Container2 > #MenuImage {
+    left: 41%;
+    top: 0%;
+}
+#Container3 > #MenuImage {
+    left: 66%;
+    top: 0%;
+}
+
+#Container0 > #MenuTitle {
+    left: 1.75%;
+}
+#Container1 > #MenuTitle {
+    left: 26.65%;
+}
+#Container2 > #MenuTitle {
+    left: 51.75%;
+}
+#Container3 > #MenuTitle {
+    left: 76.75%;
+}
+
+#Container0:hover > #MenuImage:hover {
+    left: -10%;
+    top: -1%;
+}
+#Container1:hover > #MenuImage:hover {
+    left: 15%;
+    top: -1%;
+}
+#Container2:hover > #MenuImage:hover {
+    left: 40%;
+    top: -1%;
+}
+#Container3:hover > #MenuImage:hover {
+    left: 65%;
+    top: -1%;
+}

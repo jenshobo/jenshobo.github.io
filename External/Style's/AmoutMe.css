@@ -1,0 +1,81 @@
+#Image > img {
+    width: 800px;
+    aspect-ratio: 1.5 / 1;
+
+    object-fit: cover;
+    margin-top: 25px;
+
+    border-radius: 25px;
+
+    opacity: 1;
+
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+#Text > #Text1, #Text > #Text2 {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: bold; 
+    color: whitesmoke;
+
+    width: 800px;
+
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+#Image > #Image1{
+    position: absolute;
+    left: 50%;
+    margin-left: -820px;
+    margin-top: 50px;
+}
+#Image > #Image2{
+    position: absolute;
+    left: 50%;
+    margin-left: 20px;
+    margin-top: 600px;
+}
+#Text > #Text1 {
+    position: absolute;
+    left: 50%;
+    margin-left: 20px;
+    margin-top: 100px;
+}
+#Text > #Text2 {
+    position: absolute;
+    left: 50%;
+    margin-left: -820px;
+    margin-top: 700px;
+}
+
+#Text > #Title1 {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: bold; 
+    color: whitesmoke;
+
+    width: 800px;
+
+    position: absolute;
+    left: 50%;
+    margin-left: 20px;
+    margin-top: 50px;
+
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+#Text > #Title2 {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: bold; 
+    color: whitesmoke;
+
+    width: 800px;
+    
+    position: absolute;
+    left: 50%;
+    margin-left: -820px;
+    margin-top: 650px;
+
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
