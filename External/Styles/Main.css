@@ -1,0 +1,51 @@
+.Content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /*text-align: center;*/
+    color: #f1f1f1;
+
+    background-color: rgba(0,0,0, 0.5);
+    border: 4px solid #f1f1f1;
+
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.Text {
+    float: left;
+}
+
+.Image {
+    float: right;
+    margin-left: 10px;
+}
+
+#Image {
+    border-radius: 10px;
+}
+
+.Buttons {
+    text-align: center;
+    margin: 25px;
+}
+
+#Button {
+    margin: 10px;
+
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+
+    padding: 5px;
+    border: 4px solid #f1f1f1;
+
+    transition-duration: 0.4s;
+}
+
+#Button:hover {
+    color: black;
+    background-color: #f1f1f1;
+}

@@ -1,108 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link href="./External/Style's/Image.css" rel="stylesheet" type="text/css">
-    <link href="./External/Style's/Header.css" rel="stylesheet" type="text/css">
-    <link href="./External/Style's/Animations.css" rel="stylesheet" type="text/css">
-    <link href="./External/Style's/Footer.css" rel="stylesheet" type="text/css">
-    <style>
-        body {
-            background-color: #2c363f;
-            overflow: hidden;
-            user-select: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="./External/Styles/Header.css" rel="stylesheet" type="text/css">
+  <link href="./External/Styles/Footer.css" rel="stylesheet" type="text/css">
+  <link href="./External/Styles/Background.css" rel="stylesheet" type="text/css">
+  <link href="./External/Styles/Main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="Header">
-        <div id="Title">
-            <a href="index.html" style="text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-weight: bold; color:rgb(0, 0, 0);">Portfolio Jens Hobo</a>
-        </div>
-        <div id="Help">
-            <a style="text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-weight: bold; color:rgb(0, 0, 0);">To open the menu, press the icon in the center</a>
-        </div>
-        <div id="Arrow">
-            <img src="./External/Icons/Arrow.png" alt="ArrowIcon">
-        </div>
-        <div id="Button">
-            <div id="Menu">
-                <div id="Container0">
-                    <a id="MenuTitle" href="./Pages/AmoutMe.html">About me</a>
-                    <a id="MenuImage" href="./Pages/AmoutMe.html"><img id="MenuImage" href="" src="./External/Photo's/FacePhoto.jpg" alt="MenuImage"></a>
-                </div>
-                <div id="Container1">
-                    <a id="MenuTitle" href="./Pages/Work.html">My work</a>
-                    <a id="MenuImage" href="./Pages/Work.html"><img id="MenuImage" href="" src="./External/Photo's/ValleyOverview.jpg" alt="MenuImage"></a>
-                </div>
-                <div id="Container2">
-                    <a id="MenuTitle" href="./Pages/Contact.html">Contact</a>
-                    <a id="MenuImage" href="./Pages/Contact.html"><img id="MenuImage" href="" src="./External/Photo's/Mail.png" alt="MenuImage"></a>
-                </div>
-                <div id="Container3">
-                    <a id="MenuTitle" href="https://github.com/jenshobo" target="_blank">Github</a>
-                    <a id="MenuImage" href="https://github.com/jenshobo" target="_blank"><img id="MenuImage" src="./External/Photo's/Github.png" alt="MenuImage"></a>
-                </div>
-            </div>
-            <input type="checkbox" id="btnControl" />
-            <label class="btn" for="btnControl">
-                <img id="MenuIcon" src="./External/Icons/MenuIcon.png" alt="MenuIcon">
-            </label>
-        </div>
+  <div class="Background"></div>
+  <div class="Header">
+    <div class="Link"><a id="Link" href="index.html">Portfolio</a></div> <!-- Replace with icon -->
+    <div class="Link"><a id="Link" href="./External/Pages/Work.html">My work</a></div>
+    <div class="Link"><a id="Link" href="./External/Pages/About.html">About me</a></div>
+    <div class="Link"><a id="Link" href="./External/Pages/Contact.html">Contact</a></div>
+    <div class="Link"><a id="Link" href="https://github.com/jenshobo" target="_blank">Github</a></div>
+  </div>
+  <div class="Content">
+    <div class="Text">
+      <h1 id="Title">I'm Jens Hobo</h1>
+      <b id="Information">I'm a HBO student software enigneer and I have<br>
+        a MBO degree in game development.<br><br>
+        You can read more about me and my work in<br>
+        the pages below, these same links can be<br>
+        found on top of every page.</b>
+      <div class="Buttons">
+        <a id="Button" href="./External/Pages/Work.html">My work</a>
+        <a id="Button" href="./External/Pages/About.html">About me</a>
+        <a id="Button" href="./External/Pages/Contact.html">Contact</a>
+      </div>
     </div>
-    <div class="Content">
-        <div id="OuterLeft">
-            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 1--></a>
-            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 2--></a>
-            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--can be unique--></a>
-            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 1--></a>
-            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 2--></a>
-        </div>
-        <div id="InnerLeft">
-            <a href="./Pages/AmoutMe.html"><img id="Image" src="./External/Photo's/Kaito.jpg" alt="MainImage"> <!--must be the same as 1--></a>
-            <a href="./Pages/Work/FranticFling.html"><img id="Image" src="./External/Photo's/FranticFling.png" alt="MainImage"> <!--must be the same as 2--></a>
-            <a href="./Pages/Work/Commodore.html"><img id="Image" src="./External/Photo's/Commodore.jpg" alt="MainImage"> <!--can be unique--></a>
-            <a href="./Pages/AmoutMe.html"><img id="Image" src="./External/Photo's/Kaito.jpg" alt="MainImage"> <!--must be the same as 1--></a>
-            <a href="./Pages/Work/FranticFling.html"><img id="Image" src="./External/Photo's/FranticFling.png" alt="MainImage"> <!--must be the same as 2--></a>
-        </div>
-        <div id="Middle">
-            <a href="./Pages/Work/PolygoniaValley.html"><img id="Image" src="./External/Photo's/ValleyOverview.jpg" alt="MainImage"> <!--must be the same as 1--></a>
-            <a href="./Pages/Work/DuckHunt.html"><img id="Image" src="./External/Photo's/Duck Hunt.png" alt="MainImage"> <!--must be the same as 2--></a>
-            <a href="./Pages/AmoutMe.html"><img id="Image" src="./External/Photo's/FacePhoto.jpg" alt="MainImage"> <!--can be unique--></a>
-            <a href="./Pages/Work/PolygoniaValley.html"><img id="Image" src="./External/Photo's/ValleyOverview.jpg" alt="MainImage"> <!--must be the same as 1--></a>
-            <a href="./Pages/Work/DuckHunt.html"><img id="Image" src="./External/Photo's/Duck Hunt.png" alt="MainImage"> <!--must be the same as 2--></a>
-        </div>
-        <div id="InnerRight">
-            <a href="./Pages/Work/Site.html"><img id="Image" src="./External/Photo's/Site.jpg" alt="MainImage"> <!--must be the same as 1--></a>
-            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 2--></a>
-            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--can be unique--></a>
-            <a href="./Pages/Work/Site.html"><img id="Image" src="./External/Photo's/Site.jpg" alt="MainImage"> <!--must be the same as 1--></a>
-            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 2--></a>
-        </div>
-        <div id="OuterRight">
-            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 1--></a>
-            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 2--></a>
-            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--can be unique--></a>
-            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 1--></a>
-            <a href=""><img id="Image" src="./External/Photo's/ValleyClassroom.jpg" alt="MainImage"> <!--must be the same as 2--></a>
-        </div>
+    <div class="Image">
+      <img id="Image" src="./External/Images/FacePhoto.jpg" width="300" height="300">
     </div>
-    <div class="Footer">
-        <a>Site made by Jens Hobo 2022</a>
-    </div>
+  </div>
+  <div class="Footer">
+    <b id="FooterInfo">Site by Jens Hobo 2023 V2.1</b>
+  </div>
 </body>
 </html>
+
 <!--
- _____________________________________________
-/ Wait a second, your not suppose to see this.\
-\ Are you lost?                               /
- ---------------------------------------------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
+ __________________________________
+/ You know you won't find anything \
+\ interesting in here, don't you?  /
+ ----------------------------------
+
+                    ________________________
+                   / I can stil look around, \
+                   \ can't I?                /
+                    -------------------------
+
+ ___________________
+/ I guess so yes... \
+\                   /
+ -------------------
+
+          |\___/|     /\___/\
+          )     (     )    ~(
+         =\     /=   =\~    /=
+           )===(       ) ~ (
+          /     \     /     \
+          |     |     ) ~   (
+         /       \   /     ~ \
+         \       /   \~     ~/
+  _/\_/\_/\__  _/_/\_/\__~__/_/\_/\_/\_/\_/\_
+  |  |  |  |( (  |  |  | ))  |  |  |  |  |  |
+  |  |  |  | ) ) |  |  |//|  |  |  |  |  |  |
+  |  |  |  |(_(  |  |  (( |  |  |  |  |  |  |
+  |  |  |  |  |  |  |  |\)|  |  |  |  |  |  |
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 -->
