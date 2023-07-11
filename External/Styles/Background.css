@@ -13,8 +13,6 @@ body {
     height: 100%;
     width: 100%;
 
-    background-image: url(./../Images/ValleyOverview.jpg);
-
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
