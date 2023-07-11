@@ -8,29 +8,40 @@
   <link href="./External/Styles/Header.css" rel="stylesheet" type="text/css">
   <link href="./External/Styles/Footer.css" rel="stylesheet" type="text/css">
   <link href="./External/Styles/Background.css" rel="stylesheet" type="text/css">
+  <link href="./External/Styles/Animation.css" rel="stylesheet" type="text/css">
   <link href="./External/Styles/Main.css" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  </style>
 </head>
 <body>
   <div class="Background"></div>
-  <div class="Header">
-    <div class="Link"><a id="Link" href="index.html">Portfolio</a></div> <!-- Replace with icon -->
-    <div class="Link"><a id="Link" href="./External/Pages/Work.html">My work</a></div>
-    <div class="Link"><a id="Link" href="./External/Pages/About.html">About me</a></div>
-    <div class="Link"><a id="Link" href="./External/Pages/Contact.html">Contact</a></div>
-    <div class="Link"><a id="Link" href="https://github.com/jenshobo" target="_blank">Github</a></div>
+  <div id="Header">
+    <input id="Link" type="button" value="Portfolio" title="./index.html">
+    <input id="Link" type="button" value="My work" title="./External/Pages/Work.html">
+    <input id="Link" type="button" value="About me" title="./External/Pages/About.html">
+    <input id="Link" type="button" value="Contact" title="./External/Pages/Contact.html">
+    <input id="Link" type="button" value="Github" title="https://github.com/jenshobo">
   </div>
   <div class="Content">
     <div class="Text">
       <h1 id="Title">I'm Jens Hobo</h1>
-      <b id="Information">I'm a HBO student software enigneer and I have<br>
-        a MBO degree in game development.<br><br>
-        You can read more about me and my work in<br>
-        the pages below, these same links can be<br>
-        found on top of every page.</b>
+      <b id="Information">I'm a HBO student software enigneer and I have a MBO<br>
+        degree in game development.<br><br>
+        You can read more about me and my work in the pages<br>
+        below, these same links can be found on top of every<br>
+        page.</b>
       <div class="Buttons">
-        <a id="Button" href="./External/Pages/Work.html">My work</a>
-        <a id="Button" href="./External/Pages/About.html">About me</a>
-        <a id="Button" href="./External/Pages/Contact.html">Contact</a>
+        <input id="Button" type="button" value="My work" title="./External/Pages/Work.html">
+        <input id="Button" type="button" value="About me" title="./External/Pages/About.html">
+        <input id="Button" type="button" value="Contact" title="./External/Pages/Contact.html">
       </div>
     </div>
     <div class="Image">
@@ -38,9 +49,10 @@
     </div>
   </div>
   <div class="Footer">
-    <b id="FooterInfo">Site by Jens Hobo 2023 V2.1</b>
+    <b id="FooterInfo">Site by Jens Hobo 2023 V2.2</b>
   </div>
 </body>
+<script src="./External/Script/Button.js"></script>
 </html>
 
 <!--
