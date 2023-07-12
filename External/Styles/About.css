@@ -1,0 +1,30 @@
+.Content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f1f1f1;
+
+    background-color: rgba(0,0,0, 0.5);
+    border: 4px solid #f1f1f1;
+
+    padding: 20px;
+    border-radius: 10px;
+    width: 1220px;
+}
+
+.Content div {
+    float: left;
+    height: 310px;
+    width: 610px;
+}
+
+img {
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.Text {
+    padding: 10px;
+}
