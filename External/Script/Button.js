@@ -7,7 +7,7 @@ for (var i=0, max=all.length; i < max; i++) {
         // check for 'http' to determine if link is internal or external
         // external links are to be opened on a new browser window and igone transition
         // internal links are to replace the current page
-        if (url.includes("http")){
+        if (url.includes("http") || url.includes("mailto")){
             window.open(url);
             return;
         }
