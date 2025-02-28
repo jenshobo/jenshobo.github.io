@@ -1,0 +1,21 @@
+.Content {
+    width: 1220px;
+}
+
+.Content div {
+    float: left;
+    height: 310px;
+    width: 610px;
+
+}
+
+img {
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.Text {
+    padding: 10px;
+    color: rgb(68, 68, 68);
+}

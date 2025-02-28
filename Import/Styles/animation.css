@@ -1,0 +1,17 @@
+@keyframes Site_In {
+    from {
+        height: 100%;
+    }
+    to {
+        height: 4%;
+    }
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}

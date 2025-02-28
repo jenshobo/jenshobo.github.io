@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Jens Hobo</title>
+  <link href="./Import/Styles/content.css" rel="stylesheet" type="text/css">
+  <link href="./Import/Styles/header.css" rel="stylesheet" type="text/css">
+  <link href="./Import/Styles/hooter.css" rel="stylesheet" type="text/css">
+  <link href="./Import/Styles/background.css" rel="stylesheet" type="text/css">
+  <link href="./Import/Styles/animation.css" rel="stylesheet" type="text/css">
+  <link href="./Import/Styles/about.css" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .Background {
+      background-image: url(./Import/Images/Bergen.jpg);
+      animation: grow 30s infinite alternate;
+    }
+  </style>
+</head>
+<body>
+  <div class="Background"></div>
+  <div id="Header"></div>
+  <div class="Content">
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+    <zero-md id="MD_Source" src="./Work/about.md"></zero-md>
+  </div>
+  <div div="Footer"></div>
+</body>
+<script src="./Import/Script/fileImporter.js"></script>
+</html>

@@ -1,0 +1,27 @@
+#Button {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    font-size: inherit;
+
+    background-color: transparent;
+
+    border: none;
+    overflow: hidden;
+    outline: none;
+
+    cursor: pointer;
+    color: rgb(68, 68, 68);
+}
+
+#Text {
+    color: rgb(68, 68, 68);
+}
+
+#Title {
+    color: rgb(68, 68, 68);
+}
+
+.Information {
+    padding: 20px;
+}
