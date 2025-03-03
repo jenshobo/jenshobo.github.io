@@ -3,7 +3,7 @@
 # Define the directory, config file, and HTML file
 DIRECTORY="Work"
 CONFIG_FILE="parsed_files.conf"
-HTML_FILE="path/to/your/file.html" # Change this to the actual path of your HTML file
+HTML_FILE="work.html"
 IMAGES_DIR="./Import/Images"
 
 # Check if the config file exists, create it if it doesn't
