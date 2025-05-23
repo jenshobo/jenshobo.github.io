@@ -1,3 +1,5 @@
+/* Existing styles */
+
 .Content {
     width: 1220px;
     height: 700px;
@@ -21,119 +23,128 @@ label {
     background-color: #f1f1f1f6;
 }
 
-/* For Firefox */
+/* For Firefox scrollbar */
 * {
     scrollbar-width: thin;
     scrollbar-color: #aaaaaa rgba(0,0,0,0);
-  }
+}
 
-/* For Chrome, Edge, and Safari */
+/* For Chrome, Edge, and Safari scrollbar */
 *::-webkit-scrollbar {
     width: 12px;
 }
-  
+
 *::-webkit-scrollbar-thumb {
     background-color: #aaaaaa;
     border-radius: 20px;
     border: 3px solid #f1f1f1;
 }
 
-.image-button {
-    position: relative;
-    width: 300px; /* Set a fixed width */
-    height: 200px; /* Set initial fixed height */
-    overflow: hidden;
-    border-radius: 10px; /* Rounded corners for a more attractive look */
-    cursor: pointer;
-    transition: height 0.4s ease, transform 0.4s ease, margin 0.4s ease; /* Slow transition for height and image */
-}
-
-.button-image {
-    width: 100%;
-    height: 100%; /* Start with the full height of the button */
-    object-fit: cover; /* Ensures the image covers the whole area */
-    transition: transform 0.4s ease; /* Slow transition for image scaling */
-}
-
-.text-overlay {
-    position: absolute;
-    bottom: 0; /* Always position the overlay at the bottom */
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    color: white; 
-    text-align: center;
-    padding: 10px;
-    transition: visibility 0.4s ease; /* Add transitions for smoothness */
-    cursor: pointer;
-}
-
-.title {
-    font-size: 20px; /* Example size */
-    margin: 0; /* Remove default margin */
-
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-}
-
-.description {
-    max-height: 0; /* To fully conceal the description */
-    overflow: hidden; /* Prevent overflow */
-    transition: opacity 0.4s ease, max-height 0.4s ease; /* Transition for description appearance */
-}
-
-.image-button:hover .button-image {
-    transform: scale(1.05); /* Slightly scale the image on hover */
-}
-
-.image-button:hover {
-    height: 250px; /* New height for the button when hovered */
-    margin-bottom: 0px;
-}
-
-.image-button:hover .description {
-    max-height: 100px; /* Set a max height for the description */
-}
-
-.image-button:hover .text-overlay {
-    bottom: 0; /* Keep the overlay at the bottom */
-}
-
-.button-container {
-    display: flex; /* Use flexbox to arrange children */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: flex-start; /* Start items from the left */
-    gap: 16px; /* Space between the buttons; adjust as needed */
-    padding: 20px; /* Optional padding around the container */
-}
-
-.image-button {
-    flex: 1 1 280px; /* Allow the items to grow, shrink and set a base width */
-    max-width: 300px; /* Limit the maximum width of each button */
-    margin-bottom: 50px;
-}
-
 /* Style for the year divider */
 .year-divider {
-    width: 100%; /* Full width of the button container */
-    display: flex; /* Use flexbox for the year container */
-    align-items: center; /* Center contents vertically */
-    margin: 20px 0; /* Space above and below the divider */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
     color: black;
 }
 
 .year-divider span {
-    margin-right: 16px; /* Space between the year and the line */
-    font-size: 24px; /* Make the year larger */
-    font-weight: bold; /* Make the year bold */
-    position: relative; /* To position the line in relation to the year */
-    z-index: 1; /* Ensure the year text is above the line */
+    margin-right: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
 }
 
+/* Line after the year text */
 .year-divider::before {
-    content: ''; /* Pseudo-element for the line */
-    flex-grow: 1; /* The line will grow to take the available space */
-    height: 2px; /* Height of the line */
-    background-color: #4e4e4e; /* Color of the line */
-    margin-left: 16px; /* Space between the year and the line */
+    content: '';
+    flex-grow: 1;
+    height: 2px;
+    background-color: #4e4e4e;
+    margin-left: 16px;
+}
+
+/* Container for the image buttons - make it flex with wrapping */
+.button-container {
+    display: flex; /* Enable flex layout */
+    flex-wrap: wrap; /* Wrap onto next line if needed */
+    justify-content: flex-start; /* Align items to the start (left) */
+    gap: 16px; /* Space between buttons */
+    padding: 20px; /* Optional padding around container */
+}
+
+/* Style for each image button */
+.image-button {
+    flex: 1 1 280px; /* Grow and shrink, base width 280px */
+    max-width: 300px; /* Max width per button */
+    width: 100%; /* Make it responsive within flex container */
+    height: 200px; /* Fixed height; change if needed */
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    transition: height 0.4s ease, transform 0.4s ease, margin 0.4s ease;
+    box-sizing: border-box; /* Include padding and border in size */
+    margin-bottom: 50px; /* Space below each button, optional */
+    position: relative; /* For absolute positioning of overlays if needed */
+}
+
+/* Style for images inside buttons */
+.button-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block;
+}
+
+/* Overlay at the bottom of each button */
+.text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transition: visibility 0.4s ease;
+    cursor: pointer;
+}
+
+/* Title styling inside overlay */
+.title {
+    font-size: 20px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+/* Description styling inside overlay */
+.description {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+
+/* Hover effects for image button */
+.image-button:hover .button-image {
+    transform: scale(1.05);
+}
+
+.image-button:hover {
+    height: 250px; /* Increase height on hover, optional */
+    margin-bottom: 0; /* Adjust margin if needed */
+}
+
+/* Show description on hover */
+.image-button:hover .description {
+    max-height: 100px;
+    opacity: 1;
+}
+
+.image-button:hover .text-overlay {
+    bottom: 0;
 }
