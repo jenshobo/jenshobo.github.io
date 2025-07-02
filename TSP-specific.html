@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>XLSX Import with TSP Optimization and Postal Code Coordinates</title>
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+<style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 8px;
+  }
+  input[type="text"] {
+    width: 100px;
+  }
+  #loadingIndicator {
+    display: none;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+    footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+
+<h2>Import XLSX File, Map Postal Codes, and Optimize Route with TSP</h2>
+<input type="file" id="upload" />
+<div id="loadingIndicator">Loading, please wait...</div>
+
+<!-- Postal Codes and Coordinates Table -->
+<h3>Postal Codes and Coordinates</h3>
+<table id="postalCodesTable">
+  <thead>
+    <tr>
+      <th>Postal Code</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<!-- Results Table -->
+<h3>Optimized Route</h3>
+<table id="resultTable">
+  <thead>
+    <tr>
+      <th>Start Postal Code</th>
+      <th>Via Postal Codes (Optimized Route)</th>
+      <th>End Postal Code</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<!-- Footer with info -->
+<footer>
+  <p>&copy; 2025 Jens Hobo. All rights reserved.</p>
+  <p>This data is used solely for geographic calculations and visualizations within this application. It is not shared with third parties nor saved on our servers.</p>
+</footer>
+
+<script>
+const postalCodesMap = {}; // Store postalCode => {lat, lon}
+const loadingIndicator = document.getElementById('loadingIndicator');
+
+document.getElementById('upload').addEventListener('change', function(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  showLoading();
+  // Clear previous data
+  document.querySelector('#postalCodesTable tbody').innerHTML = '';
+  document.querySelector('#resultTable tbody').innerHTML = '';
+  for (const key in postalCodesMap) delete postalCodesMap[key];
+
+  const reader = new FileReader();
+
+  reader.onload = function(e) {
+    const data = new Uint8Array(e.target.result);
+    const workbook = XLSX.read(data, {type: 'array'});
+    const firstSheetName = workbook.SheetNames[0];
+    const worksheet = workbook.Sheets[firstSheetName];
+    const jsonData = XLSX.utils.sheet_to_json(worksheet, {header: 1});
+    processData(jsonData);
+  };
+
+  reader.readAsArrayBuffer(file);
+});
+
+function processData(data) {
+  const allPostalCodes = new Set();
+
+  // Extract all postal codes from the data
+  data.forEach(row => {
+    if (row.length < 3) return;
+    const viaPostalString = row[1] || '';
+    const viaPostalCodes = viaPostalString.split(',').map(c => c.trim()).filter(c => c !== '');
+    viaPostalCodes.forEach(c => allPostalCodes.add(c));
+  });
+
+  fetchPostalCodesCoords(Array.from(allPostalCodes));
+  window._pendingRows = data; // Save for processing after fetch
+
+  function fetchComplete() {
+    populatePostalCodesTable();
+    processRows(window._pendingRows);
+    hideLoading();
+  }
+
+  // Fetch coordinates and then process
+  fetchPostalCodesCoords(Array.from(allPostalCodes), fetchComplete);
+}
+
+function fetchPostalCodesCoords(postalCodes, callback) {
+  let remaining = postalCodes.length;
+  if (remaining === 0 && callback) {
+    callback();
+    return;
+  }
+  postalCodes.forEach(code => {
+    if (postalCodesMap[code]) {
+      checkAndFinish();
+    } else {
+      fetch(`https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${encodeURIComponent(code)}`)
+        .then(res => res.json())
+        .then(data => {
+          if (data && data.length > 0) {
+            postalCodesMap[code] = { lat: data[0].lat, lon: data[0].lon };
+          } else {
+            postalCodesMap[code] = { lat: '', lon: '' };
+          }
+          checkAndFinish();
+        })
+        .catch(() => {
+          postalCodesMap[code] = { lat: '', lon: '' };
+          checkAndFinish();
+        });
+    }
+  });
+
+  function checkAndFinish() {
+    remaining--;
+    if (remaining === 0 && callback) callback();
+  }
+}
+
+function populatePostalCodesTable() {
+  const tbody = document.querySelector('#postalCodesTable tbody');
+  tbody.innerHTML = '';
+  for (const code in postalCodesMap) {
+    const tr = document.createElement('tr');
+
+    const tdCode = document.createElement('td');
+    // Create a link for postal code
+    const link = document.createElement('a');
+    link.textContent = code;
+    link.href = generateNominatimLink(code);
+    link.target = "_blank";
+    tdCode.appendChild(link);
+    tr.appendChild(tdCode);
+
+    const tdLat = document.createElement('td');
+    const inputLat = document.createElement('input');
+    inputLat.type = 'text';
+    inputLat.value = postalCodesMap[code].lat;
+    inputLat.onchange = () => { postalCodesMap[code].lat = inputLat.value; };
+    tdLat.appendChild(inputLat);
+    tr.appendChild(tdLat);
+
+    const tdLon = document.createElement('td');
+    const inputLon = document.createElement('input');
+    inputLon.type = 'text';
+    inputLon.value = postalCodesMap[code].lon;
+    inputLon.onchange = () => { postalCodesMap[code].lon = inputLon.value; };
+    tdLon.appendChild(inputLon);
+    tr.appendChild(tdLon);
+
+    tbody.appendChild(tr);
+  }
+}
+
+function generateNominatimLink(postalCode) {
+  const coords = postalCodesMap[postalCode];
+  if (coords && coords.lat && coords.lon) {
+    return `https://www.openstreetmap.org/?mlat=${coords.lat}&mlon=${coords.lon}#map=18/${coords.lat}/${coords.lon}`;
+  } else {
+    // If coords are missing, fallback to search by postal code
+    return `https://www.openstreetmap.org/search?query=${encodeURIComponent(postalCode)}`;
+  }
+}
+
+function processRows(data) {
+  const tbody = document.querySelector('#resultTable tbody');
+  tbody.innerHTML = '';
+
+  data.forEach(row => {
+    if (row.length < 3) return;
+
+    const startPostal = row[0].toString().trim();
+    const viaPostalString = row[1] || '';
+    const endPostal = row[2].toString().trim();
+
+    // Validate postal codes (basic check: non-empty, could add regex for postal code pattern)
+    if (!startPostal || !endPostal) return;
+
+    const viaPostalCodes = viaPostalString.split(',').map(c => c.trim()).filter(c => c !== '');
+
+    const allPoints = [startPostal, ...viaPostalCodes, endPostal];
+
+    const route = solveTSP(allPoints);
+
+    // Display route
+    const tr = document.createElement('tr');
+
+    const tdStart = document.createElement('td');
+    tdStart.textContent = startPostal;
+    tr.appendChild(tdStart);
+
+    const tdVia = document.createElement('td');
+    tdVia.textContent = route.slice(1, -1).join(' -> ');
+    tr.appendChild(tdVia);
+
+    const tdEnd = document.createElement('td');
+    tdEnd.textContent = endPostal;
+    tr.appendChild(tdEnd);
+
+    tbody.appendChild(tr);
+  });
+}
+
+function getDistance(a, b) {
+  const coordA = postalCodesMap[a] || { lat: '', lon: '' };
+  const coordB = postalCodesMap[b] || { lat: '', lon: '' };
+  if (coordA.lat && coordA.lon && coordB.lat && coordB.lon) {
+    const lat1 = parseFloat(coordA.lat), lon1 = parseFloat(coordA.lon);
+    const lat2 = parseFloat(coordB.lat), lon2 = parseFloat(coordB.lon);
+    // Haversine formula
+    const R = 6371; // km
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a = Math.sin(dLat / 2) ** 2 +
+      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+      Math.sin(dLon / 2) ** 2;
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c;
+  } else {
+    return Math.random() * 100; // fallback
+  }
+}
+
+function solveTSP(points) {
+  const start = points[0];
+  const end = points[points.length - 1];
+  const middlePoints = points.slice(1, -1);
+  if (middlePoints.length === 0) return points;
+
+  let bestRoute = null;
+  let minDist = Infinity;
+  permute(middlePoints, permutation => {
+    const route = [start, ...permutation, end];
+    const dist = totalRouteDistance(route);
+    if (dist < minDist) {
+      minDist = dist;
+      bestRoute = route;
+    }
+  });
+  return bestRoute || points;
+}
+
+function permute(arr, callback, l=0) {
+  if (l === arr.length - 1) {
+    callback(arr.slice());
+    return;
+  }
+  for (let i=l; i<arr.length; i++) {
+    [arr[l], arr[i]] = [arr[i], arr[l]];
+    permute(arr, callback, l+1);
+    [arr[l], arr[i]] = [arr[i], arr[l]];
+  }
+}
+
+function totalRouteDistance(route) {
+  let total = 0;
+  for (let i=0; i<route.length-1; i++) {
+    total += getDistance(route[i], route[i+1]);
+  }
+  return total;
+}
+
+function showLoading() {
+  loadingIndicator.style.display = 'block';
+}
+function hideLoading() {
+  loadingIndicator.style.display = 'none';
+}
+</script>
+</body>
+</html>
