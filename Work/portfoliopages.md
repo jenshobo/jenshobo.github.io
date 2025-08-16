@@ -2,28 +2,34 @@
 
 Generally I see myself as an embedded software engineer, meaning I create software for small embedded computers, usually in C or C++, not this entree though.
 
-## Too many pages
+## Version 0
 
-Over the years since I joined HBO I have been making changes to my own portfolio site in order to get it to look just the way I like it, without making it seem to complicated. But please do note that I am not at my best when making and designing websites. Regardless I have created a few.
-
-## 2019, it did the job
-
-For my first portfolio site I ended up using Wix, as I had no idea how to do anything like it myself, the site is pretty basic, it got the job done as it helped me get my first internship in IT. You can still visit this site to this date, just don't expect too much. [Here](https://jenshobo.wixsite.com/portofoliojenshobo) is the link to it.
+For my MBO study we where required to start an internship, for this it was advised we make a portfolio website. Back then my only knowledge with programming was C# and Unity since I followed the game development study. The result of this was that I had no clue on how or where to create a website, due to this the first site I made was using Wix, it is still only and if you must you can find it [Here](https://jenshobo.wixsite.com/portofoliojenshobo). However, due to this site being made with Wix, no programming was required to build it. Seeing as I wanted to follow a HBO study, I ended up seeing this as more of a version 0 of my site.
 
 ![{Old Wix website}](./../Import/Images/Wix-portfolio.png)
 
-## 2022, been a while
+## Version 1
 
-After starting my HBO studio is 2021 I rediscoverd my old portfolio site and quick note, I didn't like the fact I used Wix, seeing as at that point, I was well into the role of a software engineer. So I desided to create my own site using GitHub pages, which only hosts the site, and create everything else myself using html. The result was a site that looks a lot like my old Wix site, but a lot more basic. Never the less, I was happy with it.
+For my first official site while in my first year of HBO I wanted to create something myself, I had up to that point learned about PHP, HTML and CSS (I wasn't that great with it though). I never hosted my own server back then so for simplisity sake, and due to the fact I had been using GitHub for a while at that point, I created my site through [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
 
-## 2022, just later in the year
+The site itself ended up being quite basic, the overall style looked a bit like my old Wix site but simplified. As I am not a graphic designer I had no clue on wether the site was appealing, rather I judged it bassed on my own preferances and on the eash of use for both the visitor as well as myself.
 
-The site just felt a little to basic, so I ended up revisiting this project again, this time to make it a lot more dynamic, which is easier said than done. It had moving items and dynamic menu, the only problem, it wasn't easy to navigate, this would be my most shortlived version as the feedback I got was less than stellar, all to do with the useability.
+## Version 2
 
-## 2023, getting to the real deel
+At some point I discovered how to create proper 2D animations with CSS, this let me down a rabbit hole of redesigning my whole site using these methodes. The site had dynamic backgrounds of old projects of mine, slide out menu's and transition effects. This site however ended up being my shortest lived on to date as the site became complicated to use while updating the site with new entrees didn't become easier. I did keep the site around for a short while, while I prepared version 3.
 
-For this revision I made the desission to make it more basic again, but add some light touches here and there. The idea for the blurred backgrounds came into play, and if you haven't notices yet, they all move slightly. It was this version I ended up keeping and instead of starting from stratch again, I would just add more onto it. Most noteably the use of markdown files for all the contect, rather than manually writting everything into html, this sped up the process of writting content a lot.
+## Version 3
 
-## 2025, why am I doing this?
+The third (and current) version of my site returned back to what my version 1 site was, simple and straight to the point. However I did allow myself some fun effects that wouldn't take away from the overall use of the site. This being the background, now a simple image with a blur and zoom effect, and the transition effect. This version would be the one I ended up keeping the longest throughout my study and the one I used when applying for projects.
 
-The sites I have made up until this point where all for myself, the one person that needed to be happy about the design (and I am not a designer) was myself. This time however, it would be a little different, as my sister wanted to enter an art school, she needed a portfolio to show she had what it takes to enter the school. The site that came out of it was made and designed by me, but with lots of input from my sister of course, you can see it live [here](https://lykehobo.github.io/). The site needed to resemble a file system that you can navigate and search, so this I did.
+## Version 3.1
+
+While I was following along with the study I ended up really prefering doing my documentation via markdown files, as these are simple to create and maintain. during a guest class I was told about a library that would allow you to use markdown in HTML, I thought this would make my days a lot easier writting new pages (as I have been putting it off for quite a while). So for version 3.1 (sticking on 3 as I am not rebuilding the whole site from scratch this time) I wanted to finally create a system that would make the maintainer experience better. For this I implemented a system that would open a dynamic page and load in the markdown file requested (you can see this currently working in the URL above). Due to me using GitHub Pages I was not able to create this serverside, as this doesn't allow the use of PHP, all of it had to be done using JavaScript. Believe me when I say this, JavaScript is not fun to use, but I did it anyway.
+
+Any version after this just made the system work a little better by adding things to the URL for a better time sharing pages externally (not that I think anyone but me ends up doing that). While I do have a shell script that'll parse markdown files into HTML, as of writting this I have yet to finish this and I would rather just create an application for it, maybe for a future project.
+
+## Other sites
+
+My sister needed a portfolio site for her application to an art school. I ended up creating a simple site that shows her images files using a folder structure system as per her request. I have plans to create a parsing application for her as well, although I have not yet done this as of writting this. You can find her site [here](https://lykehobo.github.io/).
+
+![{Portfolio site Lyke}](./../Import/Images/Portfolio-Lyke.png)

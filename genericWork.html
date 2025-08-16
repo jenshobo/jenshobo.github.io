@@ -32,7 +32,7 @@
       let url = new URL(window.location.href);
 
       var markdownURL = sessionStorage.getItem("MD_FILE");
-      if (markdownURL != null) {
+      if (markdownURL != null && url.searchParams.get('Markdown') == null) {
         url.searchParams.append('Markdown', markdownURL)
       }
       else {
@@ -46,7 +46,7 @@
       }
 
       var backgroundURL = "URL(" + sessionStorage.getItem('BACKGROUND') + ")";
-      if (backgroundURL != "URL(null)") {
+      if (backgroundURL != "URL(null)" && url.searchParams.get('Background') == null) {
         url.searchParams.append('Background', backgroundURL)
       }
       else {
