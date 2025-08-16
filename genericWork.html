@@ -29,7 +29,15 @@
     </div>
     <div id="Footer"></div>
     <script>
+      let url = new URL(window.location.href);
+
       var markdownURL = sessionStorage.getItem("MD_FILE");
+      if (markdownURL != null) {
+        url.searchParams.append('Markdown', markdownURL)
+      }
+      else {
+        markdownURL = url.searchParams.get('Markdown');
+      }
 
       if (markdownURL != null) {
         document.getElementById('MD_Source')
@@ -38,10 +46,18 @@
       }
 
       var backgroundURL = "URL(" + sessionStorage.getItem('BACKGROUND') + ")";
+      if (backgroundURL != "URL(null)") {
+        url.searchParams.append('Background', backgroundURL)
+      }
+      else {
+        backgroundURL = url.searchParams.get('Background');
+      }
 
       if (backgroundURL != "URL(null)") {
         document.getElementById('Background').style.backgroundImage = backgroundURL;
       }
+
+      history.replaceState(null, '', url.toString());
     </script>
     <script src="./Import/Script/fileImporter.js"></script>
   </body>

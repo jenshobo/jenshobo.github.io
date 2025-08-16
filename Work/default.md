@@ -1,8 +1,10 @@
 # Oops!
 
-Looks like you tried to access this page without the proper session data. 
+Looks like you tried to access this page without the proper session data or URL data. 
 
 To make the site work properly, we suggest going to the [work page](./work.html) and continuing from there. It should update properly from there.
+
+If you visited this site via an external URL, please make sure the URL contains the variables for the markdown and background files.
 
 ### Why did this show up?
 
@@ -12,8 +14,10 @@ Besides this it will create two session variables using ```sessionStorage.setIte
 
 Ones you open the ```genericWork.html``` file (which is called like that because of [this](https://en.wikipedia.org/wiki/Generic_programming)) it'll request these two variables using ```sessionStorage.getItem()``` to replace the default ones (which are this ```.md``` file and the background currently active)
 
+You might notice it also places these variables in the URL above (although that hasn't happened on this page due to it being an error page), this is a backup methode using ```url.searchParams.append()``` in case no sessionstorage is found. Usefull when you want to share a specific markdown page without complicating it by having to direct the person around the work page. It'll check if these variables exist using ```url.searchParams.get()```, if not, it'll defualt to this error page.
+
 The advantage of this is that I'll only need to create a new ```.md``` file and the already setup code will handle the rest. This makes adding new pages extremely easy and leaves more time for fun stuff. If you which to see the code behind all this, then you can visit the [source code](https://github.com/jenshobo/jenshobo.github.io) for free.
 
-p.s. Just note that I'm more confident in languages like C and C++, so the HTML, CSS and JavaScript is definitly not on-par with fulltime webdevelopers, which I'm not so ¯\\_(ツ)_/¯
+p.s. Just note that I'm more confident in languages like C and C++, so the HTML, CSS and JavaScript is definitly not on-par with fulltime webdevelopers, which I'm not so ¯\\\_(ツ)\_/¯
 
 ***~Jens Hobo 2025***
