@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bestuur Jens online stemmen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="shredder-slot">stem doos</div>
+
+    <div id="letter" class="letter">
+      <div class="letter-inner" id="letterInner">
+        <h2>stem brief</h2>
+        <label>
+          Uw naam:
+          <input type="text" id="nameInput" />
+        </label>
+        <fieldset>
+          <legend>kies 1:</legend>
+          <label><input type="radio" name="choice" value="A" /> stem voor</label><br />
+          <label><input type="radio" name="choice" value="B" /> stem tegen</label><br />
+          <label><input type="radio" name="choice" value="C" /> onthouding</label>
+        </fieldset>
+        <button id="closeButton" disabled>sluit stem</button>
+      </div>
+      <div class="letter-closed" id="letterClosed">
+        <p>Stem doos</p>
+      </div>
+    </div>
+  </div>
+
+  <audio id="grinderSound" src="assets/paper-grinder.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
